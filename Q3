@@ -1,0 +1,14 @@
+//Return an array of the average of every window of size k. Round to 1 decimal place.([1,3,2,6,4], k=3) → [2.0, 3.7, 4.0]
+function avgOfWindow(nums,k){
+    let result = []
+for (let i=0;i<=nums.length-k;i++){
+    let total = 0
+    for(let j=i;j<i+k;j++){
+         total += nums[j]
+    }
+    let avg = total/k
+    result.push(parseFloat(avg.toFixed(1)))
+}
+return result
+}
+console.log(avgOfWindow([1,3,2,6,4],3))
