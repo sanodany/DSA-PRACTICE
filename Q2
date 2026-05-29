@@ -1,0 +1,17 @@
+/*Return 1 if the window of size k contains at least one negative number, 0 otherwise.([1,-2,3,4,-1,5], k=2) → [1,0,0,1,0]
+*/
+function checkNegativity(nums,k){
+    let result = []
+for(let i=0;i<=nums.length-k;i++){
+    let hasNegative = 0
+    for(let j=i;j<i+k;j++){
+        if(nums[j]<0){
+            hasNegative = 1
+            break
+        }
+    }
+result.push(hasNegative)
+}
+return result
+}
+console.log(checkNegativity([1,-2,3,4,-1,5],2))
