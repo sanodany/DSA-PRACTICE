@@ -1,0 +1,13 @@
+//Return an array where each element is the sum of k consecutive numbers.([1,2,3,4,5], k=2) → [3,5,7,9]
+function sumOfTwo(nums,k){
+    let result = []
+for(let i=0;i<=nums.length-k;i++){
+    let total=0
+for(let j=i;j<i+k;j++){
+      total += nums[j]
+    }
+    result.push(total)
+ }
+return result
+}
+console.log(sumOfTwo([1,2,3,4,5],2))
