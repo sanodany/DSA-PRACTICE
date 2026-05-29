@@ -1,0 +1,17 @@
+function frequentCharacter(word){
+    let highestOccurence = 0
+    let answer = ''
+  let adjustedArray = word.split('')
+  let count = {}
+  for(let i=0;i<adjustedArray.length;i++){
+      count[adjustedArray[i]] = (count[adjustedArray[i]]||0) +1
+  }
+  for(let key in count){
+     if(count[key] >highestOccurence){
+         highestOccurence = count[key]
+         answer = key
+     } 
+  }
+  return answer
+}
+console.log(frequentCharacter('aabbccca'))
