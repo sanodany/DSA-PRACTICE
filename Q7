@@ -1,0 +1,16 @@
+//8: Given an array of numbers, return true if any two adjacent numbers sum to more than 10.[1,3,8,2,5] → true (because 3+8=11)
+function traceMoreThanTen(numbers){
+let answer = false
+let total = 0
+for(let i=0;i<=numbers.length-2;i++){
+    let n1 = numbers[i]
+    let n2 = numbers[i+1]
+    total = n1+n2
+    if(total > 10){
+    answer = true
+    break
+ }
+}
+return answer
+}
+console.log(traceMoreThanTen([1,1,2,3,9]))
