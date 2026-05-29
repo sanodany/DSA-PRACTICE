@@ -1,0 +1,16 @@
+//Return an array where each element is the difference between max and min of each window of size k.([4,2,7,1,5], k=3) → [5,6,6]
+function diffWindow(nums,k){
+let result = []
+for(let i=0;i<=nums.length-k;i++){
+let array = []
+let diff = 0
+for(let j=i;j<i+k;j++){
+    array.push(nums[j])
+}
+array.sort((a,b)=>b-a)
+diff = array[0]-array[array.length - 1]
+result.push(diff)
+}
+return result
+}
+console.log(diffWindow([4,2,7,1,5],3))
