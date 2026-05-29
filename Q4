@@ -1,0 +1,16 @@
+//Return the starting index of the first window of size k that sums to the target. Return -1 if none.([1,2,3,4,5], k=2, target=7) → 2 (because 3+4=7 starts at index 2)
+function startIndex(nums,k,target){
+   let startIndexVariable = -1
+  for(let i=0;i<=nums.length-k;i++){
+      let total = 0
+      for(let j=i;j<i+k;j++){
+         total += nums[j]
+      }
+           if(total === target){
+             startIndexVariable = i
+             break
+         }
+  }
+  return startIndexVariable
+}
+console.log(startIndex([1,2,3,4,5],2,7))
