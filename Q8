@@ -1,0 +1,17 @@
+//Return the number of vowels in a string.'amalitech' → 4 (a, a, i, e)
+function vowelNbr(word){
+let array = word.split('')
+ let vowels = ['a','e','i','u','o']
+ let count = {}
+ let total = 0
+ for(let i=0;i<array.length;i++){
+     if(vowels.includes(array[i])){
+     count[array[i]] = (count[array[i]] ||0 ) + 1
+     }
+ } 
+ for(let key in count){
+     total += count[key]
+ }
+ return total
+}
+console.log(vowelNbr('amalitech'))
